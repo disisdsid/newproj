@@ -1,0 +1,4 @@
+# jenkins-config/jenkins.yaml
+jenkins:
+  systemMessage: "Dockerized Jenkins"
+
