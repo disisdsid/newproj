@@ -21,6 +21,6 @@ jobs:
 
       - name: Push Docker Image to GitHub Container Registry
         run: |
-          echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
-          docker tag my-hello-world-image ghcr.io/${{ github.repository_owner }}/my-hello-world-image:latest
-          docker push ghcr.io/${{ github.repository_owner }}/my-hello-world-image:latest
+          echo ${{ secrets.DOCKER_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+          docker tag hello-world ghcr.io/${{ github.repository_owner }}/hello-world:latest
+          docker push ghcr.io/${{ github.repository_owner }}/hello-world:latest
