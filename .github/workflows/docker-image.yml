@@ -17,7 +17,7 @@ jobs:
         run: docker build . --file Dockerfile --tag hello-world:$(date +%s)
 
       - name: Configure AWS CLI
-        run: aws configure set aws_access_key_id ${{ secrets.AWS_ACCESS_KEY_ID }} && aws configure set aws_secret_access_key ${{ secrets.AWS_SECRET_ACCESS_KEY }} && aws configure set region your-region
+        run: aws configure set aws_access_key_id ${{ secrets.AKIAZY5W53YL4MKESKM7 }} && aws configure set aws_secret_access_key ${{ secrets.iIYZNrcf1YaVuJf+bsIX1pa9lECXf7hCdQFvMj48 }} && aws configure set region ap-south-1
 
       - name: Upload to AWS S3
         run: aws s3 sync . s3://seedbucket1/
