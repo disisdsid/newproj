@@ -22,7 +22,7 @@ jobs:
           sudo apt-get install -y awscli
 
       - name: Configure AWS CLI
-        run: aws configure set aws_access_key_id ${{ secrets.AWS_ACCESS_KEY_ID }} && aws configure set aws_secret_access_key ${{ secrets.AWS_SECRET_ACCESS_KEY }} && aws configure set region ap-south-1
+        run: aws configure set aws_access_key_id ${{ secret.AWS_ACCESS_KEY_ID }} && aws configure set aws_secret_access_key ${{ secret.AWS_SECRET_ACCESS_KEY }} && aws configure set region ap-south-1
 
       - name: Upload to AWS S3
         run: aws s3 sync . s3://seedbucket1/
